@@ -7,6 +7,11 @@ It employs the BLOC (Business Logic Component) pattern for state management, ens
 
 This project uses flutter `3.13.9`.
 
+### Add API key
+
+Don't forget to provide the [OpenWeather API key](https://home.openweathermap.org/api_keys) as runtime parameter:
+`--dart-define="API_KEY=<your_key>"`
+
 ## Attribution ⭐
 
 This project uses a super cute rive animation from [rockingelevator](https://rive.app/@rockingelevator/),
