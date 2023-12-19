@@ -5,7 +5,7 @@ It employs the BLOC (Business Logic Component) pattern for state management, ens
 
 ## Getting Started 🚀
 
-This project uses flutter `3.13.9`.
+This project uses flutter `3.16.4`.
 
 ### Add API key
 

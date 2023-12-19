@@ -39,36 +39,13 @@ class WeatherResponse extends StatelessWidget {
               );
             } else if (state is WeatherLoading) {
               return const CircularProgressIndicator();
-            } else if (state is WeatherUnknownError) {
-              return const Text(
-                'An unknown error occurred.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
-              );
-            } else if (state is WeatherErrorBadRequest) {
-              return const Text(
-                'Some mandatory parameters are missing.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
-              );
-            } else if (state is WeatherErrorUnauthorized) {
-              return const Text(
-                'Your API token seems to be wrong.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
-              );
-            } else if (state is WeatherErrorNotFound) {
-              return const Text(
-                'Your city seems to be unknown.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
-              );
-            } else if (state is WeatherErrorTooManyRequests) {
-              return const Text(
-                'You are a bit too active ;). '
-                'You reached your request limit.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
-              );
-            } else if (state is WeatherErrorServer) {
-              return const Text(
-                'Ooops the server seems to be down.',
-                style: TextStyle(fontSize: 24, color: WeatherColors.red),
+            } else if (state is WeatherError) {
+              return Text(
+                state.errorMessage,
+                style: const TextStyle(
+                  fontSize: 24,
+                  color: WeatherColors.red,
+                ),
               );
             }
             return const ImpatientPlaceholder();
