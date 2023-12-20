@@ -19,6 +19,7 @@ class MyWeatherApp extends StatelessWidget {
     );
     return MaterialApp(
       theme: ThemeData(
+        useMaterial3: false,
         primarySwatch: WeatherColors.beige,
       ),
       home: BlocProvider(
